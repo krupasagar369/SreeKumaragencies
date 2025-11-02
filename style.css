@@ -13,6 +13,24 @@
     --shadow-lg: 0 8px 25px rgba(74, 144, 226, 0.3);
 }
 
+/* ===== TOP CAROUSEL IMAGE ===== */
+.carousel-img-top {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+}
+.carousel-img-top img {
+    width: 100%;
+    height: auto;
+    max-height: none; /* Remove the height restriction */
+    object-fit: contain; /* Changed from 'cover' to 'contain' */
+    display: block;
+    border-radius: 15px;
+}
+
 /* ===== BASE STYLES ===== */
 * {
     margin: 0;
@@ -29,6 +47,16 @@ body {
     color: var(--text-dark);
     line-height: 1.7;
     overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .carousel-img-top {
+        margin-top: 66px;
+    }
+    
+    .carousel-img-top img {
+        max-height: 300px;
+    }
 }
 
 /* ===== NAVBAR ===== */
@@ -235,7 +263,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 0;
     position: relative;
     overflow: hidden; */
        padding: 150px 0 100px;
@@ -1364,7 +1392,30 @@ body {
     object-fit: cover;
     border-radius: var(--border-radius);
 }
+.carousel-img-top {
+    width: 100%;
+    height: 600px; /* Increased height for better visibility */
+    overflow: hidden;
+    margin-top: 76px; /* Matches navbar height */
+    position: relative;
+}
 
+.carousel-img-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain; /* Changed to contain to show full image without cropping */
+    object-position: center;
+    background-color: #f8f9fa; /* Light background for images */
+    padding: 10px 0; /* Added padding top and bottom */
+}
+
+@media (max-width: 768px) {
+    .carousel-img-top {
+        height: 400px; /* Reduced height for mobile */
+        margin-top: 66px; /* Adjusted for mobile navbar */
+    }
+}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: var(--primary-blue);
@@ -1533,7 +1584,7 @@ body {
 }
 
 .footer-logo {
-    height: 60px;
+    height: 80px;
     width: auto;
     object-fit: contain;
 }
@@ -1726,4 +1777,3 @@ body {
 .fw-semibold {
     font-weight: 600;
 }
-
