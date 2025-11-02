@@ -1360,7 +1360,7 @@ body {
 }
 
 .carousel-img {
-    height: 500px;
+    height: 600px;
     object-fit: cover;
     border-radius: var(--border-radius);
 }
@@ -1726,3 +1726,4 @@ body {
 .fw-semibold {
     font-weight: 600;
 }
+
